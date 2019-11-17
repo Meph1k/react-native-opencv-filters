@@ -1,0 +1,11 @@
+@extern "opencv.yaml"
+
+opencv = interface +c {
+  static create(): opencv;
+  get_canny(): string;
+  get_threshold(): string;
+  get_lines(): string;
+  get_contours(): string;
+  get_segments(): string;
+  get_round_contours(): string;
+}
