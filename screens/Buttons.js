@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from "react";
-import { NativeModules, StyleSheet, Text, View, Image, ScrollView, Button, Dimensions } from "react-native";
+import { NativeModules, StyleSheet, Text, Alert, Image, ScrollView, Button, Dimensions } from "react-native";
 type Props = {};
 type State = { message: string };
 const { OpenCV } = NativeModules;
@@ -11,19 +11,36 @@ export default class App extends Component<Props, State> {
     message: ""
   };
 
+  applyFilter = (func) => async () => {
+    try {
+      const message = await func();
+      this.setState({
+        message
+      });
+    } catch(e) {
+      alert(e);
+    }
+  }
+
   getFilter = (func) => () => {
     this.setState({ message: 'loading...' })
 
-    Actions.push('camera', { applyFilter: async() => {
-        try {
-          const message = await func();
-          this.setState({
-            message
-          });
-        } catch(e) {
-          alert(e);
-        }
-    }})
+    Alert.alert(
+      'Filters',
+      'About to apply a filter',
+      [
+        {text: 'Default photo', onPress: this.applyFilter(func)},
+        {
+          text: 'Cancel',
+          onPress: () => null,
+          style: 'cancel',
+        },
+        {text: 'Camera', onPress: () => {
+            Actions.push('camera', { applyFilter: this.applyFilter(func)})
+          }},
+      ],
+      {cancelable: false},
+    );
   }
 
   getCanny = async () => {
