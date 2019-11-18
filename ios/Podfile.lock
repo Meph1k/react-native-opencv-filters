@@ -182,6 +182,14 @@ PODS:
     - React-cxxreact (= 0.61.4)
     - React-jsi (= 0.61.4)
   - React-jsinspector (0.61.4)
+  - react-native-camera (3.9.0):
+    - React
+    - react-native-camera/RCT (= 3.9.0)
+    - react-native-camera/RN (= 3.9.0)
+  - react-native-camera/RCT (3.9.0):
+    - React
+  - react-native-camera/RN (3.9.0):
+    - React
   - React-RCTActionSheet (0.61.4):
     - React-Core/RCTActionSheetHeaders (= 0.61.4)
   - React-RCTAnimation (0.61.4):
@@ -236,6 +244,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-camera (from `../node_modules/react-native-camera`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -282,6 +291,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-camera:
+    :path: "../node_modules/react-native-camera"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -321,6 +332,7 @@ SPEC CHECKSUMS:
   React-jsi: f9126dd5818fbd8fbf869be9bbc1c0543973e1a1
   React-jsiexecutor: 752f034d0f007d1141a1c52ba9ef3fd9668fbfa7
   React-jsinspector: 044105eea064aec81adc5e4d777a8f6589e7d094
+  react-native-camera: 9c50d7def800895e7991ccda6203929553ceec9c
   React-RCTActionSheet: 49433f6e3659ba5d3ee650e44b9c18743ef9a7fc
   React-RCTAnimation: 12f86a4e3542032329366b03bca2cc254a7c64a9
   React-RCTBlob: ba90a4144ad478a022b79a4e8a1f150548d39425
@@ -333,6 +345,6 @@ SPEC CHECKSUMS:
   ReactCommon: eb96b70a2a5bed775e919151fd77699fed52944c
   Yoga: 6af72bedeaea291a3a3717772d6d41836f23a1b9
 
-PODFILE CHECKSUM: 52383baee97497b103ccc9ffcfacddffefb7c7be
+PODFILE CHECKSUM: e67b51e92d03d06efcf06ac4e668ac9c678a2d3e
 
 COCOAPODS: 1.5.3

@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>NSCameraUsageDescription</key>
+    <string>Your message to user when the camera is accessed for the first time</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Your message to user when the photo library is accessed for the first time</string>
 	<key>CFBundleDisplayName</key>
 	<string>filters</string>
 	<key>CFBundleExecutable</key>
