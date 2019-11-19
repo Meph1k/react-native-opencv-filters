@@ -22,6 +22,7 @@ cv::Mat getCannyImage(const std::string & path)
 {
 //  char * dir = getcwd(NULL, 0);
 //  printf("Current dir: %s", dir);
+  std::cout << "pathpathpathpathpath" << path << std::endl;
   std::string photo = path == "" ? "/Users/meph1k/dev/filters/ios/CppSrc/fruits.jpg" : path;
   src = imread(photo, IMREAD_COLOR );
   if( src.empty() )
