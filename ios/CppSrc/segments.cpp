@@ -13,10 +13,11 @@
 #include <iostream>
 using namespace std;
 using namespace cv;
-cv::Mat getSegments()
+cv::Mat getSegments(const std::string & path)
 {
   // Load the image
-  Mat src = imread("/Users/meph1k/dev/filters/ios/CppSrc/cards.jpg");
+  std::string photo = path == "" ? "/Users/meph1k/dev/filters/ios/CppSrc/cards.jpg" : path;
+  Mat src = imread(photo, IMREAD_COLOR );
   if( src.empty() )
   {
     cout << "Could not open or find the image!\n" << endl;

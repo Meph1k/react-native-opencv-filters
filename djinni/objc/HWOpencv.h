@@ -9,16 +9,16 @@
 
 + (nullable HWOpencv *)create;
 
-- (nonnull NSString *)getCanny;
+- (nonnull NSString *)getCanny:(nonnull NSString *)path;
 
-- (nonnull NSString *)getThreshold;
+- (nonnull NSString *)getThreshold:(nonnull NSString *)path;
 
-- (nonnull NSString *)getLines;
+- (nonnull NSString *)getLines:(nonnull NSString *)path;
 
-- (nonnull NSString *)getContours;
+- (nonnull NSString *)getContours:(nonnull NSString *)path;
 
-- (nonnull NSString *)getSegments;
+- (nonnull NSString *)getSegments:(nonnull NSString *)path;
 
-- (nonnull NSString *)getRoundContours;
+- (nonnull NSString *)getRoundContours:(nonnull NSString *)path;
 
 @end

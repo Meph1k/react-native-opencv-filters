@@ -37,44 +37,44 @@ static_assert(__has_feature(objc_arc), "Djinni requires ARC to be enabled for th
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 
-- (nonnull NSString *)getCanny {
+- (nonnull NSString *)getCanny:(nonnull NSString *)path {
     try {
-        auto objcpp_result_ = _cppRefHandle.get()->get_canny();
+        auto objcpp_result_ = _cppRefHandle.get()->get_canny(::djinni::String::toCpp(path));
         return ::djinni::String::fromCpp(objcpp_result_);
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 
-- (nonnull NSString *)getThreshold {
+- (nonnull NSString *)getThreshold:(nonnull NSString *)path {
     try {
-        auto objcpp_result_ = _cppRefHandle.get()->get_threshold();
+        auto objcpp_result_ = _cppRefHandle.get()->get_threshold(::djinni::String::toCpp(path));
         return ::djinni::String::fromCpp(objcpp_result_);
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 
-- (nonnull NSString *)getLines {
+- (nonnull NSString *)getLines:(nonnull NSString *)path {
     try {
-        auto objcpp_result_ = _cppRefHandle.get()->get_lines();
+        auto objcpp_result_ = _cppRefHandle.get()->get_lines(::djinni::String::toCpp(path));
         return ::djinni::String::fromCpp(objcpp_result_);
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 
-- (nonnull NSString *)getContours {
+- (nonnull NSString *)getContours:(nonnull NSString *)path {
     try {
-        auto objcpp_result_ = _cppRefHandle.get()->get_contours();
+        auto objcpp_result_ = _cppRefHandle.get()->get_contours(::djinni::String::toCpp(path));
         return ::djinni::String::fromCpp(objcpp_result_);
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 
-- (nonnull NSString *)getSegments {
+- (nonnull NSString *)getSegments:(nonnull NSString *)path {
     try {
-        auto objcpp_result_ = _cppRefHandle.get()->get_segments();
+        auto objcpp_result_ = _cppRefHandle.get()->get_segments(::djinni::String::toCpp(path));
         return ::djinni::String::fromCpp(objcpp_result_);
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }
 
-- (nonnull NSString *)getRoundContours {
+- (nonnull NSString *)getRoundContours:(nonnull NSString *)path {
     try {
-        auto objcpp_result_ = _cppRefHandle.get()->get_round_contours();
+        auto objcpp_result_ = _cppRefHandle.get()->get_round_contours(::djinni::String::toCpp(path));
         return ::djinni::String::fromCpp(objcpp_result_);
     } DJINNI_TRANSLATE_EXCEPTIONS()
 }

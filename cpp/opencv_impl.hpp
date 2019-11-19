@@ -14,12 +14,12 @@ namespace opencv {
         OpenCVImpl();
 
         // Our methods that return a string
-        std::string get_canny();
-        std::string get_threshold();
-        std::string get_lines();
-        std::string get_contours();
-        std::string get_segments();
-        std::string get_round_contours();
+        std::string get_canny(const std::string & path);
+        std::string get_threshold(const std::string & path);
+        std::string get_lines(const std::string & path);
+        std::string get_contours(const std::string & path);
+        std::string get_segments(const std::string & path);
+        std::string get_round_contours(const std::string & path);
     };
 
 }

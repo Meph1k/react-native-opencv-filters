@@ -5,7 +5,7 @@
 #include "opencv2/highgui.hpp"
 
 using namespace cv;
-cv::Mat getCannyImage();
+cv::Mat getCannyImage(const std::string & path);
 
 
 #endif /* canny_detector_hpp */

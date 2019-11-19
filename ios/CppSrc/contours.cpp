@@ -17,9 +17,10 @@ Mat c_src_gray;
 int thresh = 100;
 RNG rng(12345);
 cv::Mat thresh_callback(int, void* );
-cv::Mat getContours()
+cv::Mat getContours(const std::string & path)
 {
-  Mat src = imread( "/Users/meph1k/dev/filters/ios/CppSrc/pole_mokotowskie.jpg" );
+  std::string photo = path == "" ? "/Users/meph1k/dev/filters/ios/CppSrc/pole_mokotowskie.jpg" : path;
+  Mat src = imread(photo, IMREAD_COLOR );
   if( src.empty() )
   {
     cout << "Could not open or find the image!\n" << endl;

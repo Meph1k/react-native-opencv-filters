@@ -13,6 +13,6 @@
 #include "opencv2/highgui.hpp"
 
 using namespace cv;
-cv::Mat getRoundContours();
+cv::Mat getRoundContours(const std::string & path);
 
 #endif /* round_contours_hpp */

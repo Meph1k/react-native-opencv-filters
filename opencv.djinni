@@ -2,10 +2,10 @@
 
 opencv = interface +c {
   static create(): opencv;
-  get_canny(): string;
-  get_threshold(): string;
-  get_lines(): string;
-  get_contours(): string;
-  get_segments(): string;
-  get_round_contours(): string;
+  get_canny(path: string): string;
+  get_threshold(path: string): string;
+  get_lines(path: string): string;
+  get_contours(path: string): string;
+  get_segments(path: string): string;
+  get_round_contours(path: string): string;
 }

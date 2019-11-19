@@ -6,17 +6,17 @@ package com.filters.opencv;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public abstract class Opencv {
-    public abstract String getCanny();
+    public abstract String getCanny(String path);
 
-    public abstract String getThreshold();
+    public abstract String getThreshold(String path);
 
-    public abstract String getLines();
+    public abstract String getLines(String path);
 
-    public abstract String getContours();
+    public abstract String getContours(String path);
 
-    public abstract String getSegments();
+    public abstract String getSegments(String path);
 
-    public abstract String getRoundContours();
+    public abstract String getRoundContours(String path);
 
     public static Opencv create()
     {
@@ -47,52 +47,52 @@ public abstract class Opencv {
         }
 
         @Override
-        public String getCanny()
+        public String getCanny(String path)
         {
             assert !this.destroyed.get() : "trying to use a destroyed object";
-            return native_getCanny(this.nativeRef);
+            return native_getCanny(this.nativeRef, path);
         }
-        private native String native_getCanny(long _nativeRef);
+        private native String native_getCanny(long _nativeRef, String path);
 
         @Override
-        public String getThreshold()
+        public String getThreshold(String path)
         {
             assert !this.destroyed.get() : "trying to use a destroyed object";
-            return native_getThreshold(this.nativeRef);
+            return native_getThreshold(this.nativeRef, path);
         }
-        private native String native_getThreshold(long _nativeRef);
+        private native String native_getThreshold(long _nativeRef, String path);
 
         @Override
-        public String getLines()
+        public String getLines(String path)
         {
             assert !this.destroyed.get() : "trying to use a destroyed object";
-            return native_getLines(this.nativeRef);
+            return native_getLines(this.nativeRef, path);
         }
-        private native String native_getLines(long _nativeRef);
+        private native String native_getLines(long _nativeRef, String path);
 
         @Override
-        public String getContours()
+        public String getContours(String path)
         {
             assert !this.destroyed.get() : "trying to use a destroyed object";
-            return native_getContours(this.nativeRef);
+            return native_getContours(this.nativeRef, path);
         }
-        private native String native_getContours(long _nativeRef);
+        private native String native_getContours(long _nativeRef, String path);
 
         @Override
-        public String getSegments()
+        public String getSegments(String path)
         {
             assert !this.destroyed.get() : "trying to use a destroyed object";
-            return native_getSegments(this.nativeRef);
+            return native_getSegments(this.nativeRef, path);
         }
-        private native String native_getSegments(long _nativeRef);
+        private native String native_getSegments(long _nativeRef, String path);
 
         @Override
-        public String getRoundContours()
+        public String getRoundContours(String path)
         {
             assert !this.destroyed.get() : "trying to use a destroyed object";
-            return native_getRoundContours(this.nativeRef);
+            return native_getRoundContours(this.nativeRef, path);
         }
-        private native String native_getRoundContours(long _nativeRef);
+        private native String native_getRoundContours(long _nativeRef, String path);
 
         public static native Opencv create();
     }

@@ -13,6 +13,6 @@
 #include "opencv2/highgui.hpp"
 
 using namespace cv;
-cv::Mat getSegments();
+cv::Mat getSegments(const std::string & path);
 
 #endif /* segments_hpp */

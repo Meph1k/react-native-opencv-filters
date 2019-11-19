@@ -20,49 +20,49 @@ namespace opencv {
 
     }
 
-    std::string OpenCVImpl::get_canny() {
+    std::string OpenCVImpl::get_canny(const std::string & path) {
       std::vector<uchar> buf;
-      cv::imencode(".jpg", getCannyImage(), buf);
+      cv::imencode(".jpg", getCannyImage(path), buf);
       auto *enc_msg = reinterpret_cast<unsigned char*>(buf.data());
       std::string encoded = base64_encode(enc_msg, buf.size());
       return encoded;
     }
   
-    std::string OpenCVImpl::get_threshold() {
+    std::string OpenCVImpl::get_threshold(const std::string & path) {
       std::vector<uchar> buf;
-      cv::imencode(".jpg", getThreshold(), buf);
+      cv::imencode(".jpg", getThreshold(path), buf);
       auto *enc_msg = reinterpret_cast<unsigned char*>(buf.data());
       std::string encoded = base64_encode(enc_msg, buf.size());
       return encoded;
     }
   
-    std::string OpenCVImpl::get_lines() {
+    std::string OpenCVImpl::get_lines(const std::string & path) {
       std::vector<uchar> buf;
-      cv::imencode(".jpg", getLines(), buf);
+      cv::imencode(".jpg", getLines(path), buf);
       auto *enc_msg = reinterpret_cast<unsigned char*>(buf.data());
       std::string encoded = base64_encode(enc_msg, buf.size());
       return encoded;
     }
   
-    std::string OpenCVImpl::get_contours() {
+    std::string OpenCVImpl::get_contours(const std::string & path) {
       std::vector<uchar> buf;
-      cv::imencode(".jpg", getContours(), buf);
+      cv::imencode(".jpg", getContours(path), buf);
       auto *enc_msg = reinterpret_cast<unsigned char*>(buf.data());
       std::string encoded = base64_encode(enc_msg, buf.size());
       return encoded;
     }
   
-    std::string OpenCVImpl::get_segments() {
+    std::string OpenCVImpl::get_segments(const std::string & path) {
       std::vector<uchar> buf;
-      cv::imencode(".jpg", getSegments(), buf);
+      cv::imencode(".jpg", getSegments(path), buf);
       auto *enc_msg = reinterpret_cast<unsigned char*>(buf.data());
       std::string encoded = base64_encode(enc_msg, buf.size());
       return encoded;
     }
   
-    std::string OpenCVImpl::get_round_contours() {
+    std::string OpenCVImpl::get_round_contours(const std::string & path) {
       std::vector<uchar> buf;
-      cv::imencode(".jpg", getRoundContours(), buf);
+      cv::imencode(".jpg", getRoundContours(path), buf);
       auto *enc_msg = reinterpret_cast<unsigned char*>(buf.data());
       std::string encoded = base64_encode(enc_msg, buf.size());
       return encoded;

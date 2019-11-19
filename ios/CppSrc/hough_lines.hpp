@@ -13,6 +13,6 @@
 #include "opencv2/highgui.hpp"
 
 using namespace cv;
-cv::Mat getLines();
+cv::Mat getLines(const std::string & path);
 
 #endif /* hough_lines_hpp */

@@ -10,7 +10,7 @@ export default class Camera extends PureComponent {
       const data = await this.camera.takePictureAsync(options);
       console.log(data.uri);
       Actions.pop();
-      this.props.applyFilter()
+      this.props.applyFilter(data.uri)
     }
   };
 

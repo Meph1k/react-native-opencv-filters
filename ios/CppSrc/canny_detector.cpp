@@ -1,6 +1,7 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/highgui.hpp"
 #include <iostream>
+#include <unistd.h>
 using namespace cv;
 Mat src, src_gray;
 Mat dst, detected_edges;
@@ -17,9 +18,12 @@ static cv::Mat CannyThreshold(int, void*)
   src.copyTo( dst, detected_edges);
   return dst;
 }
-cv::Mat getCannyImage()
+cv::Mat getCannyImage(const std::string & path)
 {
-  src = imread("/Users/meph1k/dev/filters/ios/CppSrc/fruits.jpg", IMREAD_COLOR );
+//  char * dir = getcwd(NULL, 0);
+//  printf("Current dir: %s", dir);
+  std::string photo = path == "" ? "/Users/meph1k/dev/filters/ios/CppSrc/fruits.jpg" : path;
+  src = imread(photo, IMREAD_COLOR );
   if( src.empty() )
   {
     std::cout << "Could not open or find the image!\n" << std::endl;

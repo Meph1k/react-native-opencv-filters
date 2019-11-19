@@ -12,12 +12,13 @@
 #include "opencv2/imgproc.hpp"
 using namespace cv;
 using namespace std;
-cv::Mat getLines()
+cv::Mat getLines(const std::string & path)
 {
   // Declare the output variables
   Mat l_dst, cdst, cdstP;
   // Loads an image
-  Mat src = imread( "/Users/meph1k/dev/filters/ios/CppSrc/wroclaw.jpg", IMREAD_GRAYSCALE );
+  std::string photo = path == "" ? "/Users/meph1k/dev/filters/ios/CppSrc/wroclaw.jpg" : path;
+  Mat src = imread(photo, IMREAD_GRAYSCALE );
   // Check if image is loaded fine
   if(src.empty()){
     printf(" Error opening image\n");

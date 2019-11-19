@@ -13,6 +13,6 @@
 #include "opencv2/highgui.hpp"
 
 using namespace cv;
-cv::Mat getContours();
+cv::Mat getContours(const std::string & path);
 
 #endif /* contours_hpp */

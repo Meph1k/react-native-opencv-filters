@@ -20,9 +20,10 @@ static void Threshold_Demo( int, void* )
    */
   threshold( t_src_gray, t_dst, threshold_value, max_binary_value, threshold_type );
 }
-cv::Mat getThreshold()
+cv::Mat getThreshold(const std::string & path)
 {
-  t_src = imread("/Users/meph1k/dev/filters/ios/CppSrc/Arwen-Return-of-the-King-arwen-undomiel-34589739-1000-646.jpg", IMREAD_COLOR );
+  std::string photo = path == "" ? "/Users/meph1k/dev/filters/ios/CppSrc/Arwen-Return-of-the-King-arwen-undomiel-34589739-1000-646.jpg" : path;
+  t_src = imread(photo, IMREAD_COLOR );
   if (t_src.empty())
   {
     cout << "Cannot read the image: " << std::endl;

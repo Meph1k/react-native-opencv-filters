@@ -17,9 +17,10 @@ Mat r_src_gray;
 int r_thresh = 100;
 RNG r_rng(12345);
 cv::Mat r_thresh_callback(int, void* );
-cv::Mat getRoundContours()
+cv::Mat getRoundContours(const std::string & path)
 {
-  Mat src = imread( "/Users/meph1k/dev/filters/ios/CppSrc/pole_mokotowskie.jpg" );
+  std::string photo = path == "" ? "/Users/meph1k/dev/filters/ios/CppSrc/pole_mokotowskie.jpg" : path;
+  Mat src = imread(photo, IMREAD_COLOR );
   if( src.empty() )
   {
     cout << "Could not open or find the image!\n" << endl;

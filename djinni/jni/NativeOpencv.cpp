@@ -28,62 +28,62 @@ CJNIEXPORT jobject JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_create(J
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 
-CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getCanny(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
+CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getCanny(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jstring j_path)
 {
     try {
         DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
         const auto& ref = ::djinni::objectFromHandleAddress<::opencv::Opencv>(nativeRef);
-        auto r = ref->get_canny();
+        auto r = ref->get_canny(::djinni::String::toCpp(jniEnv, j_path));
         return ::djinni::release(::djinni::String::fromCpp(jniEnv, r));
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 
-CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getThreshold(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
+CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getThreshold(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jstring j_path)
 {
     try {
         DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
         const auto& ref = ::djinni::objectFromHandleAddress<::opencv::Opencv>(nativeRef);
-        auto r = ref->get_threshold();
+        auto r = ref->get_threshold(::djinni::String::toCpp(jniEnv, j_path));
         return ::djinni::release(::djinni::String::fromCpp(jniEnv, r));
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 
-CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getLines(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
+CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getLines(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jstring j_path)
 {
     try {
         DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
         const auto& ref = ::djinni::objectFromHandleAddress<::opencv::Opencv>(nativeRef);
-        auto r = ref->get_lines();
+        auto r = ref->get_lines(::djinni::String::toCpp(jniEnv, j_path));
         return ::djinni::release(::djinni::String::fromCpp(jniEnv, r));
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 
-CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getContours(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
+CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getContours(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jstring j_path)
 {
     try {
         DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
         const auto& ref = ::djinni::objectFromHandleAddress<::opencv::Opencv>(nativeRef);
-        auto r = ref->get_contours();
+        auto r = ref->get_contours(::djinni::String::toCpp(jniEnv, j_path));
         return ::djinni::release(::djinni::String::fromCpp(jniEnv, r));
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 
-CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getSegments(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
+CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getSegments(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jstring j_path)
 {
     try {
         DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
         const auto& ref = ::djinni::objectFromHandleAddress<::opencv::Opencv>(nativeRef);
-        auto r = ref->get_segments();
+        auto r = ref->get_segments(::djinni::String::toCpp(jniEnv, j_path));
         return ::djinni::release(::djinni::String::fromCpp(jniEnv, r));
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }
 
-CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getRoundContours(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef)
+CJNIEXPORT jstring JNICALL Java_com_filters_opencv_Opencv_00024CppProxy_native_1getRoundContours(JNIEnv* jniEnv, jobject /*this*/, jlong nativeRef, jstring j_path)
 {
     try {
         DJINNI_FUNCTION_PROLOGUE1(jniEnv, nativeRef);
         const auto& ref = ::djinni::objectFromHandleAddress<::opencv::Opencv>(nativeRef);
-        auto r = ref->get_round_contours();
+        auto r = ref->get_round_contours(::djinni::String::toCpp(jniEnv, j_path));
         return ::djinni::release(::djinni::String::fromCpp(jniEnv, r));
     } JNI_TRANSLATE_EXCEPTIONS_RETURN(jniEnv, 0 /* value doesn't matter */)
 }

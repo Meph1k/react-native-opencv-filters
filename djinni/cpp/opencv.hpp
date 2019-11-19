@@ -14,17 +14,17 @@ public:
 
     static std::shared_ptr<Opencv> create();
 
-    virtual std::string get_canny() = 0;
+    virtual std::string get_canny(const std::string & path) = 0;
 
-    virtual std::string get_threshold() = 0;
+    virtual std::string get_threshold(const std::string & path) = 0;
 
-    virtual std::string get_lines() = 0;
+    virtual std::string get_lines(const std::string & path) = 0;
 
-    virtual std::string get_contours() = 0;
+    virtual std::string get_contours(const std::string & path) = 0;
 
-    virtual std::string get_segments() = 0;
+    virtual std::string get_segments(const std::string & path) = 0;
 
-    virtual std::string get_round_contours() = 0;
+    virtual std::string get_round_contours(const std::string & path) = 0;
 };
 
 }  // namespace opencv

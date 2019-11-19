@@ -11,9 +11,9 @@ export default class App extends Component<Props, State> {
     message: ""
   };
 
-  applyFilter = (func) => async () => {
+  applyFilter = (func) => async (uri) => {
     try {
-      const message = await func();
+      const message = await func(uri);
       this.setState({
         message
       });
@@ -43,28 +43,28 @@ export default class App extends Component<Props, State> {
     );
   }
 
-  getCanny = async () => {
-    return await OpenCV.getCanny()
+  getCanny = async (uri = '') => {
+    return await OpenCV.getCanny(uri)
   }
 
-  getThreshold = async () => {
-    return await OpenCV.getThreshold();
+  getThreshold = async (uri = '') => {
+    return await OpenCV.getThreshold(uri);
   }
 
-  getLines = async () => {
-    return await OpenCV.getLines();
+  getLines = async (uri = '') => {
+    return await OpenCV.getLines(uri);
   }
 
-  getContours = async () => {
-    return await OpenCV.getContours();
+  getContours = async (uri = '') => {
+    return await OpenCV.getContours(uri);
   }
 
-  getSegments = async () => {
-    return await OpenCV.getSegments();
+  getSegments = async (uri = '') => {
+    return await OpenCV.getSegments(uri);
   }
 
-  getRoundContours = async () => {
-    return await OpenCV.getRoundContours();
+  getRoundContours = async (uri = '') => {
+    return await OpenCV.getRoundContours(uri);
   }
 
   render() {

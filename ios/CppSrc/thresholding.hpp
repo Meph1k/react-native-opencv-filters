@@ -13,6 +13,6 @@
 #include "opencv2/highgui.hpp"
 
 using namespace cv;
-cv::Mat getThreshold();
+cv::Mat getThreshold(const std::string & path);
 
 #endif /* thresholding_h */
